@@ -13,7 +13,7 @@ import { disableCheckTS } from '../utils/disableCheckTS'
 import { customizePaths } from '../utils/customizePaths'
 import { customizeWebpack } from '../utils/customizeWebpack'
 
-export default class Start extends Command {
+export default class Dev extends Command {
   static description = 'Run a dev server for development'
   static aliases = ['s']
   static examples = ['$ pea start', '$pea s']
