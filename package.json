@@ -1,0 +1,85 @@
+{
+  "name": "pea-cli",
+  "version": "0.0.0",
+  "description": "CLI tool for Pea",
+  "author": "forsigner",
+  "bin": {
+    "pea": "./bin/run"
+  },
+  "bugs": "https://github.com/pea-team/pea-cli/issues",
+  "dependencies": {
+    "@oclif/command": "^1.5.19",
+    "@oclif/config": "^1.13.3",
+    "@oclif/dev-cli": "^1.22.2",
+    "@oclif/plugin-help": "^2.2.1",
+    "chalk": "^2.4.2",
+    "chokidar": "^3.1.1",
+    "cross-spawn": "^7.0.0",
+    "download-git-repo": "^2.0.0",
+    "fs-extra": "^8.1.0",
+    "fs-jetpack": "^2.2.2",
+    "globby": "^10.0.1",
+    "inquirer": "^7.0.0",
+    "json-ts": "^1.6.4",
+    "nyc": "^14.1.1",
+    "ora": "^4.0.1",
+    "prettier": "^1.18.2",
+    "tslib": "^1.10.0",
+    "typescript": "3.6.3",
+    "webpack": "^4.41.0",
+    "webpackbar": "^4.0.0",
+    "yosay": "^2.0.2"
+  },
+  "devDependencies": {
+    "@oclif/test": "^1.2.5",
+    "@types/chai": "^4.2.3",
+    "@types/chokidar": "^2.1.3",
+    "@types/cross-spawn": "^6.0.0",
+    "@types/fs-extra": "^8.0.0",
+    "@types/inquirer": "^6.5.0",
+    "@types/jest": "^24.0.18",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.7.8",
+    "@types/prettier": "^1.18.2",
+    "@types/webpack": "^4.39.1",
+    "@types/webpack-dev-server": "^3.1.7",
+    "@types/webpackbar": "^2.6.0",
+    "@types/yosay": "^0.0.29",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0",
+    "standard-version": "^7.0.0",
+    "ts-node": "^8.4.1"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib",
+    "/assets",
+    "/oclif.manifest.json"
+  ],
+  "homepage": "https://github.com/pea-team/pea-cli/blob/master/README.md",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "oclif": {
+    "commands": "./lib/commands",
+    "bin": "pea",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "pea-team/pea-cli",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "prepack": "rm -rf lib && tsc -b && oclif-dev manifest",
+    "build": "rm -rf lib && tsc -b && oclif-dev manifest",
+    "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
+    "version": "oclif-dev readme && git add README.md",
+    "release": "standard-version"
+  },
+  "types": "lib/index.d.ts"
+}
