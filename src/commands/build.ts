@@ -17,6 +17,7 @@ export default class Build extends Command {
   async run() {
     const spinner = ora('Pea prepare...').start();
     process.env.NODE_ENV = 'production'
+    process.env.SKIP_PREFLIGHT_CHECK = 'true'
 
     prepare()
 
