@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/pea-team/pea-cli/compare/v0.0.2...v0.0.3) (2019-10-08)
+
+
+### Bug Fixes
+
+* SKIP_PREFLIGHT_CHECK in build ([8cab836](https://github.com/pea-team/pea-cli/commit/8cab836))
+
+
+### Features
+
+* can  customHtmlWebpackPlugin ([c7d312f](https://github.com/pea-team/pea-cli/commit/c7d312f))
+
 ### [0.0.2](https://github.com/pea-team/pea-cli/compare/v0.0.1...v0.0.2) (2019-09-28)
 
 ### 0.0.1 (2019-09-27)
