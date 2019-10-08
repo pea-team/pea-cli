@@ -65,8 +65,9 @@ export const customizeWebpack = () => {
     )
 
     const peaConfig = getPeaConfig()
+    const isProd = env === 'production'
 
-    if (config.plugins && peaConfig && peaConfig.outputHtml) {
+    if (config.plugins && peaConfig && peaConfig.outputHtml && isProd) {
       // custom HtmlWebpackPlugin
       customHtmlWebpackPlugin(config.plugins, peaConfig.outputHtml)
     }
