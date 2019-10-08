@@ -12,12 +12,27 @@ function resolve(path: string) {
   return join(srcDir, path)
 }
 
+function customHtmlWebpackPlugin(plugins: any[], outputHtml: string) {
+  try {
+    const HtmlWebpackPlugin = plugins.find(
+      item => item.constructor.name === 'HtmlWebpackPlugin',
+    )
+
+    if (HtmlWebpackPlugin) {
+      HtmlWebpackPlugin.options.filename = outputHtml
+    }
+  } catch {
+    //
+  }
+}
+
 export const customizeWebpack = () => {
   const webpackConfig = require(webpackConfigPath)
   require.cache[require.resolve(webpackConfigPath)].exports = (env: string) => {
     const config: Configuration = webpackConfig(env)
 
     if (config.plugins) {
+      // WebpackBar
       config.plugins.push(new WebpackBar())
     }
 
@@ -50,6 +65,11 @@ export const customizeWebpack = () => {
     )
 
     const peaConfig = getPeaConfig()
+
+    if (config.plugins && peaConfig && peaConfig.outputHtml) {
+      // custom HtmlWebpackPlugin
+      customHtmlWebpackPlugin(config.plugins, peaConfig.outputHtml)
+    }
 
     // handle config.plugins
     if (peaConfig && peaConfig.plugins) {
