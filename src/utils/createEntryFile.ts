@@ -1,8 +1,9 @@
 import fs from 'fs-extra'
-import texts from './texts'
 import { tmpDir, entryPath } from './paths'
+import { formatCode } from './formatCode'
 
-export const createEntryFile = () => {
+export const createEntryFile = (text: string) => {
   fs.ensureDirSync(tmpDir)
-  fs.writeFileSync(entryPath, texts.entry, { encoding: 'utf8' })
+  
+  fs.writeFileSync(entryPath, formatCode(text), { encoding: 'utf8' })
 }

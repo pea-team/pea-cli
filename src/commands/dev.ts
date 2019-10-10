@@ -1,7 +1,7 @@
 import { Command } from '@oclif/command'
 import ora from 'ora';
 
-import { reactScriptsModulePath } from '../utils/paths'
+import { reactScriptsModulePath, baseDir } from '../utils/paths'
 import { prepare } from '../utils/prepare'
 import { watcher } from '../utils/wather'
 
@@ -22,6 +22,7 @@ export default class Dev extends Command {
     const spinner = ora('Pea prepare...').start();
     process.env.NODE_ENV = process.env.NODE_ENV || 'development'
     process.env.SKIP_PREFLIGHT_CHECK = 'true'
+
 
     await prepare()
     watcher()
