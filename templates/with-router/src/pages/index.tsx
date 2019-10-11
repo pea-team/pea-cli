@@ -6,7 +6,7 @@ export default () => (
     <h1>Home Page</h1>
     <nav>
       <Link to="/">Home</Link>
-      <div>|</div>
+      <span> | </span>
       <Link to="/about">About</Link>
     </nav>
   </div>
