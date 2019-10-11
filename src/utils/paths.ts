@@ -1,4 +1,4 @@
-import path, { join } from 'path'
+import path from 'path'
 import fs from 'fs'
 
 export const baseDir = path.join(__dirname, '..', '..')
@@ -19,22 +19,14 @@ export const configPaths = [
   },
 ]
 
-export const tmpCommonDir = `${tmpDir}/common`
-export const commonDir = `${srcDir}/common`
-export const commonFiles = `${srcDir}/common/**/*.{ts,tsx}`
-export const commonPaths = [
-  {
-    name: 'App.tsx',
-    origin: `${srcDir}/common/App.tsx`,
-    target: `${tmpDir}/common/App.tsx`,
-  },
-]
+export const AppPath = `${srcDir}/App.tsx`
+export const tmpAppPath = `${tmpDir}/App.tsx`
 
 export const entryPath = `${tmpDir}/index.tsx`
 export const tmpPublicDir = `${tmpDir}/public`
+
 export const publicDir = `${appDir}/public`
 export const tmpHtmlPath = `${tmpDir}/public/index.html`
-
 
 export const tscScript = path.join(appDir, 'node_modules', '.bin', 'tsc')
 

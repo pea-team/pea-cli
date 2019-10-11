@@ -1,8 +1,8 @@
 import { watchConfig } from './watchConfig'
-import { watchCommon } from './watchCommon'
+import { watchAppFile } from './watchAppFile'
 
 export function watcher() {
   // watch files
   watchConfig()
-  watchCommon()
+  watchAppFile()
 }
