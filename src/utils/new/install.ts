@@ -1,10 +1,35 @@
 import spawn from 'cross-spawn'
 import path from 'path'
+import { projectType } from './projectType.enum'
 
-export function install(root: string) {
+const deps = {
+  [projectType.SIMPLE]: [
+    "@types/react@latest",
+    "@types/react-dom@latest",
+    '@peajs/core@latest',
+    'react@latest',
+    'react-dom@latest',
+    'pea-cli@latest',
+  ],
+
+  [projectType.ROUTER]: [
+    "@types/react@latest",
+    "@types/react-dom@latest",
+    '@peajs/core@latest',
+    '@peajs/router@latest',
+    'pea-plugin-router@latest',
+    'react@latest',
+    'react-dom@latest',
+    'pea-cli@latest',
+  ],
+}
+
+type Type = projectType.SIMPLE | projectType.ROUTER
+
+export function install(root: string, type: Type) {
   const command = 'npm'
   process.chdir(root)
-  const args: string[] = ['i']
+  const args: string[] = ['i', ...deps[type]]
 
   const child = spawn(command, args, { stdio: 'inherit' })
 

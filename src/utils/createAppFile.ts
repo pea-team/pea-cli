@@ -1,5 +1,5 @@
 import fs from 'fs-extra'
-import { AppPath, tmpAppPath } from './paths'
+import { AppPath, tmpAppPath, tmpDir } from './paths'
 import texts from './texts';
 
 function writeDefaultFile(target: string) {
@@ -10,7 +10,7 @@ function writeDefaultFile(target: string) {
 
 
 export const createAppFile = () => {
-
+    fs.ensureDirSync(tmpDir)
     if (fs.existsSync(AppPath)) {
       fs.copyFileSync(AppPath, tmpAppPath)
     } else {

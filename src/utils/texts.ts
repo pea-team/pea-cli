@@ -2,7 +2,7 @@ import { formatCode } from './formatCode'
 
 const entryImportCode = `
 import React, { Fragment } from 'react'
-import Pea from '../core'
+import Pea from '@peajs/core'
 import userConfig from './config/config'
 import App from './App'
 `
