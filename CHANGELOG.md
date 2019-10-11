@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.0](https://github.com/pea-team/pea-cli/compare/v0.0.5...v0.1.0) (2019-10-11)
+
+
+### Features
+
+* improve plugin design ([9f2a5dc](https://github.com/pea-team/pea-cli/commit/9f2a5dc))
+* rm common dir ([607c453](https://github.com/pea-team/pea-cli/commit/607c453))
+* use templates ([a0bde0d](https://github.com/pea-team/pea-cli/commit/a0bde0d))
+
 ### [0.0.5](https://github.com/pea-team/pea-cli/compare/v0.0.4...v0.0.5) (2019-10-10)
 
 
