@@ -1,6 +1,5 @@
 import { rmTmpDir } from './rmTmpDir'
 import { createPeaConfig } from './createPeaConfig'
-import { createPluginConfig } from './createPluginConfig'
 import { customizeAppInfo } from './customizeAppInfo'
 import { createEntryFile } from './createEntryFile'
 import { createPublicFiles } from './createPublicFiles'
@@ -11,12 +10,13 @@ import { initPlugin } from './initPlugin'
 export async function prepare() {
   rmTmpDir()
   createPeaConfig()
-  createPluginConfig()
 
-  const result = initPlugin()
+  // const result = initPlugin()
+  initPlugin()
 
   // create file
-  createEntryFile(result.entryText)
+  // createEntryFile(result.entryText)
+  createEntryFile()
   createPublicFiles()
   createCommonFiles()
   createConfigFile()

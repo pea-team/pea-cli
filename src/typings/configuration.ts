@@ -2,7 +2,7 @@ import { Configuration as WebpackConfig } from 'webpack'
 import { Configuration as ServerConfig } from 'webpack-dev-server'
 
 export interface Plugin {
-  webpack?: (config: WebpackConfig, env?: string) => WebpackConfig
+  updateWebpackConfig?: (config: WebpackConfig, env?: string) => WebpackConfig
   devServer?: (config: ServerConfig) => ServerConfig
 }
 

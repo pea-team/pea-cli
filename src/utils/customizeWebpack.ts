@@ -75,16 +75,17 @@ export const customizeWebpack = () => {
     // handle config.plugins
     if (peaConfig && peaConfig.plugins) {
       for (const plugin of peaConfig.plugins) {
-        if (plugin.webpack) {
-          newConfig = plugin.webpack(newConfig, env)
+        if (plugin.updateWebpackConfig) {
+          newConfig = plugin.updateWebpackConfig(newConfig, env)
         }
       }
     }
 
-    // handle config.webpack
-    if (peaConfig && peaConfig.webpack) {
-      return peaConfig.webpack(newConfig, env)
-    }
+
+    // TODO: handle config.webpack
+    // if (peaConfig && peaConfig.webpack) {
+    //   return peaConfig.webpack(newConfig, env)
+    // }
     return newConfig
   }
 }

@@ -6,8 +6,6 @@ export const baseDir = path.join(__dirname, '..', '..')
 export const appDir = path.resolve(fs.realpathSync(process.cwd()))
 export const srcDir = path.resolve(fs.realpathSync(process.cwd()), 'src')
 
-export const pluginConfigPath = join(srcDir, 'config', 'plugin.ts')
-
 export const tmpDir = `${srcDir}/.pea`
 export const tmpConfigDir = `${tmpDir}/config`
 
