@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.1](https://github.com/pea-team/pea-cli/compare/v0.1.0...v0.1.1) (2019-10-12)
+
+
+### Features
+
+* update template ([913281b](https://github.com/pea-team/pea-cli/commit/913281b))
+
 ## [0.1.0](https://github.com/pea-team/pea-cli/compare/v0.0.5...v0.1.0) (2019-10-11)
 
 
