@@ -42,7 +42,7 @@
       "@constants/*": ["constants/*"],
       "@interfaces/*": ["interfaces/*"],
       "@locales/*": ["locales/*"],
-      "@types/*": ["types/*"]
+      "@typings/*": ["typings/*"]
     }
   },
   "include": ["src"]
