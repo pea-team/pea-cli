@@ -4,29 +4,29 @@ import path, { join } from 'path'
 import yosay from 'yosay'
 import fs from 'fs-extra'
 
-import { checkAppDir } from '../utils/new/checkAppDir'
-import { createAppDir } from '../utils/new/createAppDir'
-import { getProjectType } from '../utils/new/getProjectType'
-import { install } from '../utils/new/install'
-import { showTips } from '../utils/new/showTips'
-import { createPkg } from '../utils/new/createPkg'
+import { checkAppDir } from '../utils/create/checkAppDir'
+import { createAppDir } from '../utils/create/createAppDir'
+import { getProjectType } from '../utils/create/getProjectType'
+import { install } from '../utils/create/install'
+import { showTips } from '../utils/create/showTips'
+import { createPkg } from '../utils/create/createPkg'
 
 const { green, yellow } = chalk
 
-class New extends Command {
-  static description = 'Init a new project'
-  static aliases = ['n']
-  static examples = ['$ pea new', '$ pea n']
+class Create extends Command {
+  static description = 'Create a new project'
+  static aliases = ['c']
+  static examples = ['$ pea create', '$ pea c']
 
   static args = [{ name: 'appName' }]
 
   async run() {
-    const { args } = this.parse(New)
+    const { args } = this.parse(Create)
     const appName: string = args.appName
     if (!appName) {
       return this.log(
         yellow('required project name, eg: '),
-        green('pea new myapp'),
+        green('pea create myapp'),
       )
     }
 
@@ -52,4 +52,4 @@ class New extends Command {
   }
 }
 
-export = New
+export = Create

@@ -11,9 +11,9 @@ npm i -g pea-cli
 
 ## Command
 
-### `pea new`
+### `pea create`
 
-Init a new pea project.
+Create a pea project.
 
 ### `pea dev`
 
