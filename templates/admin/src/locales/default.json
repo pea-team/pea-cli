@@ -1,0 +1,18 @@
+{
+  "appName": "Pea Admin",
+  "menu": {
+    "home": "报告列表",
+    "user": "用户中心",
+    "profile": "个人信息",
+    "settings": "设置",
+    "guide": "指南",
+    "stateManagement": "状态管理",
+    "i18n": "国际化",
+    "form": "表单",
+    "router": "路由",
+    "test": "test"
+  },
+  "settings": "Settings",
+  "num": 1000,
+  "root": false
+}
