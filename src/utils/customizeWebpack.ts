@@ -50,6 +50,7 @@ export const customizeWebpack = () => {
         '@modals': resolve('modals/'),
         '@drawers': resolve('drawers/'),
         '@hooks': resolve('hooks/'),
+        '@business': resolve('business/'),
         '@dto': resolve('dto/'),
         '@bo': resolve('bo/'),
         '@do': resolve('do/'),

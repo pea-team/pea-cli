@@ -34,6 +34,7 @@
       "@modals/*": ["modals/*"],
       "@drawers/*": ["drawers/*"],
       "@hooks/*": ["hooks/*"],
+      "@business/*": ["business/*"],
       "@dto/*": ["dto/*"],
       "@images/*": ["images/*"],
       "@css/*": ["css/*"],
