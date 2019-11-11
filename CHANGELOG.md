@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/pea-team/pea-cli/compare/v0.1.2...v0.1.3) (2019-11-11)
+
+
+### Features
+
+* add [@business](https://github.com/business) alias ([72ec768](https://github.com/pea-team/pea-cli/commit/72ec768))
+* add [@forms](https://github.com/forms) alias ([9110078](https://github.com/pea-team/pea-cli/commit/9110078))
+* create admin template ([c17775b](https://github.com/pea-team/pea-cli/commit/c17775b))
+
 ### [0.1.2](https://github.com/pea-team/pea-cli/compare/v0.1.1...v0.1.2) (2019-10-19)
 
 ### [0.1.1](https://github.com/pea-team/pea-cli/compare/v0.1.0...v0.1.1) (2019-10-12)
