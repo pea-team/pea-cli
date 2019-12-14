@@ -19,4 +19,5 @@ export async function prepare() {
   createConfigFile()
 
   customizeAppInfo()
+
 }

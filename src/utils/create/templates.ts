@@ -16,6 +16,7 @@ export const templates: any = {
     'react@latest',
     'react-dom@latest',
     'pea-cli@latest',
+    'stook@latest',
   ],
 
   'admin': [
