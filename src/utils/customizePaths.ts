@@ -1,12 +1,12 @@
 import { join } from 'path'
-import { srcDir, reactScriptsPaths, entryPath, tmpPublicDir } from './paths'
+import { srcDir, reactScriptsPaths, tmpEntryPath, tmpPublicDir } from './paths'
 import { getPeaConfig } from './getPeaConfig'
 
 export const customizePaths = () => {
   const paths = require(reactScriptsPaths)
 
   paths.appSrc = srcDir
-  paths.appIndexJs = entryPath
+  paths.appIndexJs = tmpEntryPath
   paths.appPublic = tmpPublicDir
 
   // customize build dir

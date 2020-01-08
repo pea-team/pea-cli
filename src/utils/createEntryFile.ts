@@ -1,5 +1,5 @@
 import fs from 'fs-extra'
-import { tmpDir, entryPath } from './paths'
+import { tmpDir, tmpEntryPath, entryPath } from './paths'
 import { formatCode } from './formatCode'
 import texts from './texts'
 
@@ -29,9 +29,17 @@ function createEntryCode() {
   `
 }
 
+/**
+ * 可以自定义 entry，如果存在，就直接copy过去，否则生成 index.ts
+ */
 export const createEntryFile = () => {
   fs.ensureDirSync(tmpDir)
-  fs.writeFileSync(entryPath, formatCode(createEntryCode()), {
-    encoding: 'utf8',
-  })
+
+  if (fs.existsSync(entryPath)) {
+    fs.copyFileSync(entryPath, tmpEntryPath)
+  } else {
+    fs.writeFileSync(tmpEntryPath, formatCode(createEntryCode()), {
+      encoding: 'utf8',
+    })
+  }
 }

@@ -22,7 +22,8 @@ export const configPaths = [
 export const AppPath = `${srcDir}/App.tsx`
 export const tmpAppPath = `${tmpDir}/App.tsx`
 
-export const entryPath = `${tmpDir}/index.tsx`
+export const entryPath = `${srcDir}/index.tsx`
+export const tmpEntryPath = `${tmpDir}/index.tsx`
 export const tmpPublicDir = `${tmpDir}/public`
 
 export const publicDir = `${appDir}/public`

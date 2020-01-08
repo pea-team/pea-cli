@@ -7,6 +7,13 @@
     "pea": "./bin/run"
   },
   "bugs": "https://github.com/pea-team/pea-cli/issues",
+  "prettier": {
+    "semi": false,
+    "tabWidth": 2,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "printWidth": 100
+  },
   "dependencies": {
     "@oclif/command": "^1.5.19",
     "@oclif/config": "^1.13.3",
