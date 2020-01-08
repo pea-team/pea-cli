@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/pea-team/pea-cli/compare/v0.1.3...v0.1.4) (2020-01-08)
+
+
+### Bug Fixes
+
+* update templates deps ([da47914](https://github.com/pea-team/pea-cli/commit/da47914))
+
+
+### Features
+
+* support customize entry file ([8f67ff4](https://github.com/pea-team/pea-cli/commit/8f67ff4))
+
 ### [0.1.3](https://github.com/pea-team/pea-cli/compare/v0.1.2...v0.1.3) (2019-11-11)
 
 
