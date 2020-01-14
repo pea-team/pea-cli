@@ -1,6 +1,5 @@
 # pea-cli
 
-
 > CLI tool for peajs
 
 ## Installation
@@ -11,7 +10,7 @@ npm i -g pea-cli
 
 ## Command
 
-### `pea create`
+### `pea create [projectName]`
 
 Create a pea project.
 
@@ -28,5 +27,3 @@ Runs the test watcher in an interactive mode.
 ### `pea build`
 
 Builds the app for production to the build folder.
-
-
