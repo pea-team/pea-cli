@@ -63,6 +63,7 @@ export const customizeWebpack = () => {
         '@locales': resolve('locales/'),
         '@interfaces': resolve('interfaces/'),
         '@typings': resolve('typings/'),
+        '@generated': resolve('generated/'),
       }),
     )
 
